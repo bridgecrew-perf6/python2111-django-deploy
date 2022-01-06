@@ -75,13 +75,14 @@ WSGI_APPLICATION = 'prueba_examen.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+# LOCAL
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql', # cambiar la base de datos a postgres
@@ -92,6 +93,18 @@ DATABASES = {
 #         'PORT': '5432', # puerto del servidor postgres predeterminado
 #     }
 # }
+
+# SERVIDOR
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', # cambiar la base de datos a postgres
+        'NAME': 'prueba_examen', # nombre de la base de datos, se creará en el servidor de Postgres a continuación
+        'USER': 'fboisier2', # postgres para macOS o 'USER': 'postgres', para Windows
+        'PASSWORD': '123456', # contraseña a la que la cambió al instalar Postgres
+        'HOST': '127.0.0.1', # dirección IP localhost
+        'PORT': '5432', # puerto del servidor postgres predeterminado
+    }
+}
 
 
 # Password validation
