@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+
+{% block titulo %} CONTENIDO DE CONTACTO {% endblock %}
+
+{% block style %}
+h1 {
+    color: red;
+}
+{% endblock %}
+
+
+{% block contenido %}
+
+{% include 'app/menu.html' %}
+
+<div class="container">
+<div class="row mt-5">
+    <div class="col-md-12">
+        <h1>PRUEBA DE CONTACTO DESDE BLOCK CONTENIDO</h1>
+        <p>Esto es un parrafo de INDEX</p>
+    </div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    toastr.info("ESTOS DESDE CONTACTO");
+{% endblock %}
